@@ -23,13 +23,14 @@
         e = document.getElementById("chat-input");
         ipc.sendSync('synchronous-message', e.value);
       }
+      
     </script>
   </head>
   <body>
     <div class="chat small-12 columns">
       <div class="row collapse">
         <div class="small-10 columns">
-          <input type="text" id="chat-input" placeholder="Chat Text Here!">
+          <input type="text" id="chat-input" placeholder="Chat Text Here!" onkeydown="if (event.keyCode == 13) send_message();"/>
         </div>
         <div class="small-2 columns">
           <a href="#" id="chat" class="tiny button chat" onclick="send_message();return false;">CHAT!</a>
