@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url('../fonts/source-sans-pro/SourceSansPro-Regular.otf'); /* IE9 Compat Modes */
+}
+
+body {
+  background: #fff;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: "SourceSansPro", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  position: relative;
+  cursor: auto; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "SourceSansPro", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #222222;
+    text-rendering: optimizeLegibility;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4; }
+    h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+      font-size: 60%;
+      color: #6f6f6f;
+      line-height: 0; }
