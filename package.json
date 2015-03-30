@@ -1,21 +1,21 @@
 {
-  "name": "nuttychat",
-  "productName": "NuttyChat",
+  "name": "watercooler",
+  "productName": "watercooler",
   "version": "0.0.1",
-  "description": "A Squirrel Chat Client",
+  "description": "A Simple Chat Client",
   "main": "./src/browser/main.js",
   "author": "Lee Faus",
   "repository": {
     "type": "git",
-    "url": "https://github.com/squirrelco/nuttychat.git"
+    "url": "https://github.com/watercooler/nuttychat.git"
   },
   "bugs": {
-    "url": "https://github.com/squirrelco/nuttychat/issues"
+    "url": "https://github.com/squirrelco/watercooler/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/squirrelco/nuttychat/raw/master/LICENSE.md"
+      "url": "http://github.com/squirrelco/watercooler/raw/master/LICENSE.md"
     }
   ],
   "dependencies": {
