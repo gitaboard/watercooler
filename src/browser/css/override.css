@@ -28,3 +28,13 @@ body {
       font-size: 60%;
       color: #6f6f6f;
       line-height: 0; }
+
+  a.tiny.button.chat {
+    margin-left: 10px;
+    font-family: "SourceSansPro", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  div.chat {
+    margin-top: 10px;
+  }

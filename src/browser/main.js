@@ -28,6 +28,12 @@ connection.on('ready', function() {
     });
   });
 
+ipc.on('synchronous-message', function(event, arg) {
+  console.log("server side event result ==> " + arg);  // prints "ping"
+  x = connection.exchange("hubot.chatops", {type: 'direct', autoDelete: true});
+  x.publish("repositories.sample", arg);
+});
+
 // Quit when all windows are closed.
 app.on('window-all-closed', function() {
   if (process.platform != 'darwin')

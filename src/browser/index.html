@@ -7,22 +7,40 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/override.css" />
     <script src="js/vendor/modernizr.js"></script>
-  </head>
-  <body>
     <script>
-      require('ipc').on('chat', function(message) {
+      var ipc = require('ipc');
+      ipc.on('chat', function(message) {
         e = document.getElementById("chat-text");
-        node = document.createElement("h1");
+        node = document.createElement("h4");
         text = document.createTextNode(message);
         node.appendChild(text);
         e.appendChild(node);
         console.log('Web Page Side => ' + message);
       });
+
+      function send_message() {
+        console.log("send_message clicked!");
+        e = document.getElementById("chat-input");
+        ipc.sendSync('synchronous-message', e.value);
+      }
     </script>
-    <h1>Hello NuttyChat</h1>
-    We are using node.js <script>document.write(process.version)</script>
-    and atom-shell <script>document.write(process.versions['atom-shell'])</script>.
-    <div id="chat-text">
+  </head>
+  <body>
+    <div class="chat small-12 columns">
+      <div class="row collapse">
+        <div class="small-10 columns">
+          <input type="text" id="chat-input" placeholder="Chat Text Here!">
+        </div>
+        <div class="small-2 columns">
+          <a href="#" id="chat" class="tiny button chat" onclick="send_message();return false;">CHAT!</a>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="chat small-12 columns">
+    <div class="row collapse">
+      <div id="chat-text" class="small-12" class="chat-history"></div>
+    </div>
+  </div>
   </body>
 </html>
